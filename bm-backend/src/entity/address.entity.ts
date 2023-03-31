@@ -1,9 +1,9 @@
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn } from 'typeorm';
 import { User } from './user.entity';
 
-@Entity({ name: 't_Shippingaddress' })
+@Entity({ name: 't_Address' })
 export class Address {
-  @PrimaryColumn('uuid')
+  @PrimaryColumn()
   address_id: string;
 
   @PrimaryColumn()
