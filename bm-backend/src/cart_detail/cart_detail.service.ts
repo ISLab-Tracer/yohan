@@ -20,10 +20,10 @@ export class CartDetailService {
    */
   async createCartDetail(cartDetailInfo: CreateCartDetailDto) {
     try {
-      if (cartDetailInfo.cart_id) {
-        const { cart_id } = cartDetailInfo;
+      const { cart_id, book_id } = cartDetailInfo;
+      if (cart_id && book_id) {
         const check = await this.cartDetailRepository.findOne({
-          where: { cart_id },
+          where: { cart_id, book_id },
         });
         if (check) {
           throw EntityBadRequestException();
