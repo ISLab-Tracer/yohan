@@ -1,0 +1,449 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.line {
+    padding-top: 2%;
+    border-top: 1px solid #cccdd4;
+}
+
+
+.equip-page-titlebox {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    height: 5%;
+    align-items: center;
+}
+
+.equip-page-title-h4 {
+    width: 70%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.equip-page-buttonbox {
+    display: flex;
+    font-size: 0.85rem;
+}
+
+.equip-page-button {
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 4px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.equip-page-button-first {
+    background-color: #4f67ff;
+    border: 1px solid #4d5ecd;
+    color: white;
+}
+
+.equip-page-button-firsthover :hover {
+    background-color: #465adb;
+    cursor: pointer;
+}
+
+.equip-page-button-secondhover :hover {
+    background-color: #eeeef0;
+    cursor: pointer;
+}
+
+.equip-page-button-second {
+    border: 1px solid #dcdee8;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+    color: #59595f;
+}
+
+.equip-page-searchbox {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.equip-page-search-inputbox {
+    width: 500px;
+    height: 80%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(203, 204, 211);
+    border-radius: 8px;
+    color: #cbccd3;
+}
+
+.equip-page-search-inputbox-focus {
+    width: 500px;
+    height: 80%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #203dff;
+    box-shadow: 0 0 1px 1px #203dff;
+    border-radius: 8px;
+    color: #cbccd3;
+}
+
+.equip-page-search-input {
+    padding-left: 5px;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.equip-page-search-input::placeholder {
+    color: #4f67ff;
+}
+
+:focus {
+    outline: none;
+}
+
+.equip-page-search-codebox {
+    width: 45px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(203, 204, 211);
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.equip-page-search-checkbox {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 80%;
+    margin-left: 20px;
+}
+
+.equip-page-search-checkbox-check {
+    outline: none;
+    margin-right: 1px;
+}
+
+.equip-page-search-checkbox-input {
+    padding-left: 5px;
+    font-size: 0.8rem;
+}
+
+.equip-page-mainbox {
+    display: flex;
+    width: 100%;
+    min-width: 500px;
+    height: 100%;
+    overflow-y: scroll;
+    border-top: 1px solid rgb(203, 204, 211);
+    margin-top: 10px;
+}
+
+/* 테스트용 50% -> 100% */
+.equip-page-zeroitembox {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.equip-page-zeroitembox-p {
+    color: #8f91a0;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.equip-page-zeroitembox-button {
+    display: flex;
+    height: 30px;
+    background-color: #4f67ff;
+    border: 1px solid #4d5ecd;
+    color: white;
+    box-shadow: 0 0 1px 1px #203dff;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 4px;
+    font-size: 0.9rem;
+}
+
+.equip-page-itembox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.equip-page-itembox-left {
+    border-right: 1px solid #cccdd4;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.equip-page-itembox-left-titlebox {
+    border-bottom: 1px solid #cccdd4;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+}
+
+.equip-page-itembox-left-titleall {
+    display: flex;
+    width: 85%;
+    height: 50px;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.equip-page-itembox-left-titleall-first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.equip-page-itembox-left-titleall-second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.equip-page-itembox-left-sortbox {
+    display: flex;
+    width: 15%;
+    min-width: 40px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.equip-page-itembox-left-listbox {
+    border-bottom: 1px solid #cccdd4;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    cursor: pointer;
+}
+
+.equip-page-itembox-left-list {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    align-items: center;
+}
+
+.equip-page-itembox-left-img {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.equip-page-itembox-left-info {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    padding-left: 20px;
+    justify-content: center;
+}
+
+.equip-page-itembox-left-info-title {
+    font-size: 0.9rem;
+
+}
+
+.equip-page-itembox-left-info-property {
+    font-size: 0.8rem;
+    color: #8f91a0;
+}
+
+.equip-page-itembox-left-countbox {
+    display: flex;
+    width: 15%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+}
+
+.equip-page-itembox-right {
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.equip-page-itembox-zeroitem {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+}
+
+.equip-page-itembox-zeroitem-p {
+    display: flex;
+    font-size: 0.9rem;
+    color: #8f91a0;
+}
+
+.equip-page-itembox-clickitembox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 0 10%;
+    border-left: 1px solid #cccdd4;
+}
+
+.equip-page-itembox-clickitembox-titlebox {
+    border-bottom: 1px solid #cccdd4;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 60px;
+}
+
+.equip-page-itembox-clickitembox-title {
+    width: 80%;
+    padding-left: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.equip-page-itembox-clickitembox-buttonbox {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 20%;
+    min-width: 120px;
+}
+
+.equip-page-itembox-clickitembox-button {
+    border: 1px solid #cccdd4;
+    width: 40px;
+    min-width: 40px;
+    height: 30px;
+    border-radius: 6px;
+    box-shadow: 0 1px 1px 0 #0000001a;
+    font-size: 0.8rem;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.equip-page-itembox-clickitembox-infobox {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    padding: 3% 2%;
+}
+
+.equip-page-itembox-clickitembox-infobox-imgbox {
+    width: 180px;
+    height: 180px;
+    margin: 2px auto 20px auto;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+}
+
+.equip-page-itembox-clickitembox-infobox-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.leftbutton {
+    border-right: 1px solid #cccdd4;
+}
+
+
+.equip-page-equipitem-box {
+    display: flex;
+    width: auto;
+    padding: 10px 20px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.equip-page-equipitem-box-title {
+    display: flex;
+    width: 50%;
+    font-size: 0.9rem;
+}
+
+.equip-page-equipitem-box-content {
+    display: flex;
+    width: 50%;
+    font-size: 0.8rem;
+}
+
+.equip-page-equipitem-box-input {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    border: 1px solid #cbccd3;
+    border-radius: 4px;
+}
+
+.equip-page-equipitem-edit-buttonbox {
+    display: flex;
+    margin-top: 5%;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.equip-page-equipitem-edit-button {
+    display: flex;
+    width: 20%;
+    border-radius: 5px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: 1%;
+    margin-left: 2%;
+}
+
+.equip-page-equipitem-button-left {
+    background-color: #4f67ff;
+    color: white;
+}
+
+.equip-page-equipitem-button-right {
+    background-color: #eeeef0;
+    border: 1px solid #dcdee8;
+    box-shadow: 0 1px 1px 0 #0000001a;
+}
+
+.equip-component-file {
+    display: none;
+}

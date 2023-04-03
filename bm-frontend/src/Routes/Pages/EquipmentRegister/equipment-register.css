@@ -1,0 +1,42 @@
+.equipment-register-container{
+    width: 100%;
+    height: 100%;
+    padding: 20px 40px;
+}
+
+.equipment-register-container .equipment-register-form{
+    width: 90%;
+    min-height: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.equipment-register-container .equipment-register-form .equipinfo-wrapper{
+    width: 100%;
+    min-height: 275px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.equipment-register-container .equipment-register-form .equipinfo-wrapper .left{
+    flex: 1;
+    min-height: 275px;
+}
+
+.equipment-register-container .equipment-register-form .equipinfo-wrapper .right{
+    min-width: 250px;
+    min-height: 375px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.equipment-register-container .equipment-register-form .btn-group{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
