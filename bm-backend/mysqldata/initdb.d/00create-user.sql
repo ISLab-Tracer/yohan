@@ -1,0 +1,5 @@
+CREATE USER 'chunsik'@'%' IDENTIFIED BY "chunsik";
+
+GRANT ALL PRIVILEGES ON *.* TO 'chunsik'@'%';
+
+FLUSH PRIVILEGES;
