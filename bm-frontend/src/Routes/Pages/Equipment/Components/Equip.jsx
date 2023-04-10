@@ -10,7 +10,6 @@ Equip.List = ({
   img,
   title,
   price,
-  team,
   category,
   project,
   count,
@@ -42,8 +41,7 @@ Equip.List = ({
         <div className="equip-page-itembox-left-info">
           <p className="equip-page-itembox-left-info-title">{title}</p>
           <p className="equip-page-itembox-left-info-property">
-            {stringToMoneyFormat(price)}원 / {project} / {team} / {category} /{' '}
-            {charger}
+            {stringToMoneyFormat(price)}원 / {project} / {category} / {charger}
           </p>
         </div>
         <div className="equip-page-itembox-left-countbox">
@@ -102,7 +100,6 @@ Equip.Detail = ({
   charger,
   project,
   qty,
-  team,
 }) => {
   /* Router */
   /* State */
@@ -150,7 +147,6 @@ Equip.Detail = ({
           />
           <Equip.Text title="가격" value={stringToMoneyFormat(price)} />
           <Equip.Text title="프로젝트" value={project} />
-          <Equip.Text title="팀" value={team} />
           <Equip.Text title="소유자" value={charger} />
         </div>
 

@@ -1,8 +1,4 @@
 import {
-  AUTH_DUPLICATION_REQUEST,
-  AUTH_NOT_FOUND_REQUEST,
-  AUTH_SIGNIN_DUPLICATION_REQUEST,
-  AUTH_SIGNUP_DUPLICATION_REQUEST,
   AUTH_SIGNUP_FAILURE,
   ENTITY_BAD_REQUEST,
   ErrorCode,
@@ -15,7 +11,7 @@ import {
  * @returns
  */
 export const EntityBadRequestException = (
-  message?: string
+  message?: string,
 ): ServiceException => {
   return new ServiceException(ENTITY_BAD_REQUEST, message);
 };
@@ -26,28 +22,8 @@ export const EntityBadRequestException = (
  * @param message
  * @returns
  */
-export const AuthDuplicationRequestException = (
-  message?: string
-): ServiceException => {
-  return new ServiceException(AUTH_DUPLICATION_REQUEST, message);
-};
-export const AuthSignupDuplicationRequestException = (
-  message?: string
-): ServiceException => {
-  return new ServiceException(AUTH_SIGNUP_DUPLICATION_REQUEST, message);
-};
-export const AuthNotFoundRequestException = (
-  message?: string
-): ServiceException => {
-  return new ServiceException(AUTH_NOT_FOUND_REQUEST, message);
-};
-export const AuthSigninDuplicationRequestException = (
-  message?: string
-): ServiceException => {
-  return new ServiceException(AUTH_SIGNIN_DUPLICATION_REQUEST, message);
-};
 export const AuthSignupFailureException = (
-  message?: string
+  message?: string,
 ): ServiceException => {
   return new ServiceException(AUTH_SIGNUP_FAILURE, message);
 };

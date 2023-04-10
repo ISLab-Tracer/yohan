@@ -1,4 +1,6 @@
+import { UserAPI } from 'API';
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import { getSession, logout, readBuffer, setCookie, writeBuffer } from 'Utils';
 
 const SessionContext = createContext(null);
 
@@ -22,7 +24,18 @@ const SessionManager = ({ children }) => {
    * @returns
    */
   const checkSession = () => {
-    return true;
+    const result = getSession();
+    if (result) {
+      const { user_nm, ...s } = result;
+      const ss = {
+        ...s,
+        user_nm: readBuffer(user_nm),
+      };
+      setSession(ss);
+      return true;
+    }
+    setSession(null);
+    return false;
   };
 
   /**
@@ -31,7 +44,18 @@ const SessionManager = ({ children }) => {
    * @returns
    */
   const handleCheckToken = async () => {
-    return true;
+    const s = getSession();
+    if (!s) {
+      return;
+    }
+    const result = await UserAPI.verifyToken();
+    if (result) {
+      return true;
+    }
+
+    setSession(null);
+    logout();
+    return false;
   };
 
   /**
@@ -41,6 +65,17 @@ const SessionManager = ({ children }) => {
    * @returns
    */
   const handleSession = (sessionInfo) => {
+    const { access_token, ...user } = sessionInfo;
+
+    const s_user = {
+      ...user,
+      user_nm: writeBuffer(user.user_nm),
+    };
+
+    setSession(s_user);
+    setCookie('ISLAB_TRACER', access_token);
+    setCookie('TRACER_USER', JSON.stringify(s_user));
+    checkSession();
     return true;
   };
 

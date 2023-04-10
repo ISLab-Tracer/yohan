@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import LoadingManager from './Utils/LoadingManager';
+import SessionManager from 'Hooks/SessionManager';
 import CommonDataManager from 'Hooks/CommonDataManager';
 
 console.log(`
@@ -18,11 +19,13 @@ Last Release: 2023.03.29
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <CommonDataManager>
-      <LoadingManager>
-        <App />
-      </LoadingManager>
-    </CommonDataManager>
+    <SessionManager>
+      <CommonDataManager>
+        <LoadingManager>
+          <App />
+        </LoadingManager>
+      </CommonDataManager>
+    </SessionManager>
   </BrowserRouter>
 );
 

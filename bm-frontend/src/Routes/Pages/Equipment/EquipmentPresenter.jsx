@@ -42,18 +42,16 @@ const EquipmentPresenter = ({
 
     const temp = equipList.filter((item) => {
       const {
-        team: { team_nm },
         equipment_nm,
         user: { user_nm },
         category: { category_nm },
         project: { project_title },
       } = item;
-      const teamCond = team_nm.includes(keyword);
       const userCond = user_nm.includes(keyword);
       const equipCond = equipment_nm.includes(keyword);
       const categoryCond = category_nm.includes(keyword);
       const projectCond = project_title.includes(keyword);
-      return teamCond || userCond || equipCond || categoryCond || projectCond;
+      return userCond || equipCond || categoryCond || projectCond;
     });
     setFilterList(temp);
   }, [keyword, equipList]);
@@ -66,7 +64,6 @@ const EquipmentPresenter = ({
       equipment_price,
       equipment_thumbnail,
       equipment_qty,
-      team: { team_nm },
       category: { category_nm },
       user: { user_nm },
       project: { project_title },
@@ -79,7 +76,6 @@ const EquipmentPresenter = ({
         img={thumbnail}
         title={equipment_nm}
         price={equipment_price}
-        team={team_nm}
         project={project_title}
         category={category_nm}
         count={equipment_qty}
@@ -136,7 +132,6 @@ const EquipmentPresenter = ({
               price={detailItem.equipment_price}
               qty={detailItem.equipment_qty}
               charger={detailItem.user.user_nm}
-              team={detailItem.team.team_nm}
               project={detailItem.project.project_title}
               thumbnail={`${BUCKET_URL}${detailItem.equipment_thumbnail}`}
               editOn={() => {}}

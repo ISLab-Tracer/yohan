@@ -89,10 +89,10 @@ export const deleteCookie = (name, { path, domain }) => {
   }
 };
 
-export const RegEmail = (email) => {
+export const RegId = (id) => {
   // eslint-disable-next-line
-  const regEmail = /^[A-Za-z0-9_\.\-]+@islab+\.re+\.kr+/;
-  const result = regEmail.test(email);
+  const regId = /^[A-Za-z0-9_\.\-]+/;
+  const result = regId.test(id);
   return result;
 };
 

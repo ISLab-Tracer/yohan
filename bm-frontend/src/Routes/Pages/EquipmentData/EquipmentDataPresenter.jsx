@@ -30,12 +30,6 @@ const columns = [
     editable: true,
   },
   {
-    field: 'team',
-    headerName: '팀명',
-    width: 150,
-    editable: true,
-  },
-  {
     field: 'created',
     headerName: '등록일자',
     width: 150,
@@ -49,7 +43,6 @@ const rows = [
     equipment_price: '10,000',
     category: '카테고리',
     user: '오시몬',
-    team: '블록체인',
     created: '2023-03-28',
   },
   {
@@ -58,7 +51,6 @@ const rows = [
     equipment_price: '10,000',
     category: '카테고리',
     user: '오시몬',
-    team: '블록체인',
     created: '2023-03-28',
   },
 ];
